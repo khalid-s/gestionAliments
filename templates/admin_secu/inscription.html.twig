@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Conexxion  {% endblock %}
+{% block monTitre %} Inscription {% endblock %}
+{% block body %}
+    {{ form_start(form)}}
+        {{form_row(form.username, {
+            'attr' : {"placeholder": "saisir votre login"},
+            'label' : "Votre nom"
+            })
+        }}
+        {{form_row(form.password, {
+            'attr' : {"placeholder": "saisir votre password"},
+            'label' : "Votre nom"
+            })
+        }}
+        {{form_row(form.verificationPassword, {
+            'attr' : {"placeholder": "confirmer votre password"},
+            'label' : "password"
+            })
+        }}
+        <input type="submit" class="btn btn-primary" value="valider">
+    {{form_end(form)}}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center border border-dark bg-dark rounded m-2 p-2 text-white">Liste des types</h1>
+    <div class="row">
+        {% for type in types %}
+            <div class="col-6">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <img src="{{asset('images/types/' ~ type.image)}}" class="perso_imgAliment card-img-top" alt="{{type.libelle}}">
+                    </div>
+                    <div class="col">{{type.libelle}}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
