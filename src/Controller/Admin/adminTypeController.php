@@ -28,6 +28,7 @@ class adminTypeController extends AbstractController
 
     /**
      * @Route("/admin/types/{id}", name="admin_types_suppression", methods={"DELETE"})
+     * @Route("/admin/types/{id}", name="admin_types_suppression", methods={"DELETE"})
      */
     public function suppression(Type $type, Request $request, EntityManagerInterface $entityManager): Response
     {
